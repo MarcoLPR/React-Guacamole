@@ -1,0 +1,21 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: [ubuntu-latest]
+    
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            node-
+      - name: npm build
+        run: |
+          npm ci
+          npm run build
+          npm run lint
