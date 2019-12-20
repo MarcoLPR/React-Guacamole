@@ -1,0 +1,50 @@
+{
+  "name": "react-guacamole",
+  "version": "0.0.1",
+  "description": "A template repo to quickly start new React projects",
+  "main": "index.ts",
+  "scripts": {
+    "build:tsc": "tsc",
+    "build": "parcel build ./src/index.html -d ./wwwroot --no-source-maps",
+    "lint": "tsc --noEmit && eslint src/**/*.{js,ts,tsx} --quiet --fix",
+    "start": "parcel ./src/index.html -d ./wwwroot --open --port 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoLPR/React-Guacamole.git"
+  },
+  "keywords": [
+    "react",
+    "template",
+    "eslint",
+    "prettier"
+  ],
+  "author": "MarcoLPR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarcoLPR/React-Guacamole/issues"
+  },
+  "homepage": "https://github.com/MarcoLPR/React-Guacamole#readme",
+  "dependencies": {
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-router-dom": "^5.1.2"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.16",
+    "@types/react-dom": "16.9.4",
+    "@types/react-router": "^5.1.3",
+    "@types/react-router-dom": "^5.1.3",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-easy-unsafe": "^1.0.2",
+    "typescript": "3.7.3"
+  }
+}
